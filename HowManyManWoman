@@ -1,0 +1,39 @@
+package pl.wsis.java;
+import java.util.Scanner;
+
+public class Zadanie5
+{
+    public static void main(String[] args)
+    {
+        String[] names = new String[5];
+        String[] woman = new String[5];
+        String[] man = new String[5];
+        Scanner enteredData = new Scanner(System.in);
+
+        int a =0,b =0;
+        for(int i =0; i< 5; i++)
+        {
+            System.out.print("Enter name: ");
+            names[i] = enteredData.nextLine();
+            if(names[i].charAt(names[i].length()-1) == 'a')
+                woman[a++] = names[i];
+            else
+                man[b++] = names[i];
+        }
+
+        System.out.print(a +" Woman:");
+        for(int i =0; i< a; i++)
+        {
+            System.out.print(" " + woman[i]);
+            if(i < a-1)
+                System.out.print(",");
+        }
+        System.out.print(". "+b +" Man:");
+        for(int i =0; i< b; i++)
+        {
+            System.out.print(" "+man[i]);
+            if(i < b-1)
+                System.out.print(",");
+        }
+    }
+}
